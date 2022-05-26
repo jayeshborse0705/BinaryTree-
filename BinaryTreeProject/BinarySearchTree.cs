@@ -55,7 +55,32 @@ namespace BinaryTreeProject
         public void GetSize()
         {
             Console.WriteLine("Size"+" "+(1 + this.leftCount +this.rightCount));
-        } 
-
+        }
+        public bool IfExist(T element, BinarySearchTree<T> node)
+        {
+            
+            if(node==null)
+            {
+                return false;
+            }
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Found the element in BST" +" "+node.NodeData);
+                result=true;
+            }
+            else
+            {
+                Console.WriteLine("current element is {0} in BST",node.NodeData);
+            }
+            if (element.CompareTo(node.NodeData)<0)
+            {
+                IfExist(element, node.LeftTree);
+            }
+            if (element.CompareTo(node.NodeData) > 0)
+            {
+                IfExist(element,node.RightTree);
+            }
+            return result;  
+        }
     }
 }

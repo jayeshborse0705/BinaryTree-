@@ -9,21 +9,23 @@ namespace BinaryTreeProject
     public static class Program
     {
         public static void Main(string[] args) {
-            BinarySearchTree<int> binarySearch = new BinarySearchTree<int>(56);
-            binarySearch.Insert(30);
-            binarySearch.Insert(70);
-            binarySearch.Insert(22);
-            binarySearch.Insert(40);
-            binarySearch.Insert(60);
-            binarySearch.Insert(95);
+            BinarySearchTree<int> binarySearch = new BinarySearchTree<int>(13);
+            binarySearch.Insert(12);
             binarySearch.Insert(11);
+            binarySearch.Insert(10);
+            binarySearch.Insert(9);
+            binarySearch.Insert(8);
+            binarySearch.Insert(7);
+            binarySearch.Insert(6);
+            binarySearch.Insert(5);
+            binarySearch.Insert(4);
             binarySearch.Insert(3);
-            binarySearch.Insert(16);
-            binarySearch.Insert(65);
-            binarySearch.Insert(63);
-            binarySearch.Insert(67);
+            binarySearch.Insert(2);
+            binarySearch.Insert(1);
             binarySearch.GetSize();
             binarySearch.Display();
+            bool result = binarySearch.IfExist(17, binarySearch);
+            Console.WriteLine(result);
                 
         }
         
